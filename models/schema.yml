@@ -3,6 +3,10 @@ version: 2
 models:
   - name: customers
     description: "{{ doc('customers') }}"
+    meta:
+      measures:
+        total_customers:
+          aggregation: count
     columns:
       - name: customer_id
         description: primary key of the model
